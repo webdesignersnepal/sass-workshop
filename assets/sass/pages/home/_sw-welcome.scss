@@ -1,0 +1,55 @@
+.sw-welcome-wrapper{
+	background-color: $color_white;
+	margin-bottom: 218px;
+
+	.sw-welcome{
+	    position: absolute;
+	    top: -150px;
+	    left: 0;
+	    right: 0;
+	    padding: 50px 30px 60px;
+	    margin: 0 auto;
+	    width: 800px;
+	    max-width: 100%;
+	    z-index: 1;
+	    background-color: $color_white;
+	    text-align: center;
+	    @include box-shadow ( 0 0 20px rgba(0, 0, 0, 0.1) );
+		
+		h2{
+			font-size: 30px;
+			font-family: $font_title;
+			color: $color_primary;
+			text-transform: capitalize;
+
+			@include media( xs ){
+				font-size: 20px;
+			}
+		}
+		.line{
+		    width: 150px;
+		    border: 1px solid $color_primary;
+		    display: inline-block;
+		    position: relative;
+
+		    &:after{
+		    	content: " ";
+		    	width: 10px;
+		    	height: 10px;
+		    	background-color: $color_primary;
+		    	@extend %center;
+		    	@include border-radius( 50% );
+		    }
+		}
+
+		.description{
+			margin: 55px 0 40px;
+			font-size: 18px;
+			max-height: 42px;
+			overflow: hidden;
+			font-style: italic;
+			color: $color_text ;
+		}
+	}
+
+}

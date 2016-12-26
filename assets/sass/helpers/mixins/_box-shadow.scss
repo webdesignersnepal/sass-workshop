@@ -1,0 +1,8 @@
+// generic box-shadow
+@mixin box-shadow($box-shadows) {
+    -moz-box-shadow: $box-shadows;
+    -o-box-shadow: $box-shadows;
+    -ms-box-shadow: $box-shadows;
+    -webkit-box-shadow: $box-shadows;
+    box-shadow: $box-shadows;
+}

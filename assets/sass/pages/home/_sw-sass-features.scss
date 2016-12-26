@@ -1,0 +1,75 @@
+.sw-sass-features{
+    padding: 50px 0;
+    text-align: center;
+    @include clearfix();
+
+    .feature{
+        margin: 30px 0;
+    	&:hover{
+    		.icon{
+    			background-color: $color_primary;
+    			color: $color_white;
+    			@include scale( 1.05 );
+    			@include transition ( color 0.2s linear, background-color 0.4s ease-in-out, transform 0.4s ease-in-out );
+
+    			&:after{
+    				left: 10px;
+		    		right: 10px;
+		    		bottom: 10px;
+		    		top: 10px;
+		    		@include transition ( all 0.4s linear );
+    			}
+    		}
+    		h3{
+    			color: $color_primary;
+    			letter-spacing: 1.5px;
+    			@include transition( color 0.2s linear, letter-spacing 0.3s linear );
+    		}
+    	}
+
+    	.icon{
+    		width: 150px;
+	    	height: 150px;
+		    color: $color_text;
+	    	display: inline-block;
+	    	position: relative;
+	    	background-color: $color_white;
+	    	@include border-radius( 50% );  
+	    	@include box-shadow ( 0 0 20px rgba(0, 0, 0, 0.1) );
+	    	@include scale( 1 );
+	    	@include transition ( color 0.1s linear, background-color 0.1s ease-in-out, transform 0.2s );
+
+	    	&:after{
+	    		content: "";
+	    		position: absolute;
+	    		left: 0;
+	    		right: 0;
+	    		bottom:0;
+	    		top: 0;
+	    		border: 1px solid $color_white;
+	    		@include border-radius ( 50% );
+	    	}
+
+	    	i{
+    		    font-size: 65px;
+    		    line-height: 150px;
+	    	}
+    	}
+
+    	h3{
+    		margin: 20px 0 15px;
+    		letter-spacing: 0;
+            text-transform: capitalize;
+    		font-weight: $font_weight_bold;
+    		color: darken( $color_text, 15% );
+    		@include transition( color 0.1s linear, letter-spacing 0.2s linear );
+    	}
+
+    	.desc{
+    		font-size: 16px;
+    		color: $color_text;
+    		font-style: italic;
+    	}
+
+    }	
+}

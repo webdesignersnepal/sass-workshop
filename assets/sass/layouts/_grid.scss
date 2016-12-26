@@ -1,0 +1,52 @@
+$container_lg: 1170px;
+$container_md: 970px;
+$container_sm: 750px;
+$container_xs: auto;
+
+//container
+.container{
+	position: relative;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: $container_lg;
+
+	@include media( md ){
+		width: $container_md;
+	}
+
+	@include media( sm ){
+		width: $container_sm;
+	}
+	@include media( xs ){
+		width: $container_xs;
+	}
+}
+
+//row
+.row{
+	margin-left: -15px;
+	margin-right: -15px;
+	@include clearfix();
+}
+
+// grids
+%common{
+	position: relative;
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;	
+}
+
+@for $i from 1 through 12{
+	.col-md-#{$i}{
+			@extend %common;
+			width: ($i * 100%)/12;
+	}
+}
+
+@include media( sm ){
+	div[class^="col-md"]{
+		width: 100%;
+	}
+}

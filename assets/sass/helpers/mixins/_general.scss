@@ -1,0 +1,7 @@
+//change name general-prefix
+@mixin general( $properties, $value ){
+	-webkit-#{$properties}: $value;
+       -moz-#{$properties}: $value;
+	     -o-#{$properties}: $value;
+	        #{$properties}: $value;
+}

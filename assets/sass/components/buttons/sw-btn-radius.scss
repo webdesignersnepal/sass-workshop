@@ -1,0 +1,19 @@
+.sw-btn-radius{
+	padding: 4px 25px;
+	font-family: $font_title;
+    color: $color_primary;
+    font-size: 18px;
+    @include border-radius( 20px );	
+    border: 2px solid $color_primary;
+    //animation
+    background-color: transparent;
+    letter-spacing: 0;
+    @include transition( color 0.1s linear, border 0.2s, background-color 0.1s, letter-spacing 0.3s linear );
+    &:hover{
+    	color: $color_white;
+    	background-color: $color_primary;
+    	border:1px solid transparent;
+    	letter-spacing: 2px;
+    	@include transition( color 0.2s linear, border 0.1s, background-color 0.3s, letter-spacing 0.4s ease-in-out );
+    }
+}
